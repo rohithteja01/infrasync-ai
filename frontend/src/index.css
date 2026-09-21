@@ -1,0 +1,639 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* ==========================================================================
+   NEUTRAL CHARCOAL ENTERPRISE THEME (Infrasync AI)
+   Layered Color Architecture:
+   - Page Background:      #101010
+   - Main Content:         #161616
+   - Sidebar:              #101010
+   - Cards / Surfaces:     #1C1C1C
+   - Elevated Cards:       #252525
+   - Inputs / Controls:    #161616
+   - Primary Borders:      #323232
+   - Subtle Borders:       #2D2D2D
+   - Primary Text:         #CCCCCC
+   - Secondary Text:       #9D9D9D
+   - Muted Text:           #666666
+   ========================================================================== */
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #101010 !important;
+  color: #CCCCCC !important;
+}
+
+/* Page Background Overrides */
+html.dark .min-h-screen,
+html.dark .bg-slate-50 {
+  background-color: #101010 !important;
+}
+
+/* Main Content Area */
+html.dark div.flex-1.flex.flex-col.min-w-0,
+html.dark main {
+  background-color: #161616 !important;
+}
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+html.dark aside {
+  background-color: #101010 !important;
+  border-color: #2D2D2D !important;
+}
+
+html.dark aside > div:first-child,
+html.dark aside .border-b,
+html.dark aside .border-slate-800 {
+  border-color: #2D2D2D !important;
+}
+
+html.dark aside .border-t,
+html.dark aside .border-slate-800\/80 {
+  border-color: #2D2D2D !important;
+}
+
+html.dark aside nav button:not(.bg-brand-600) {
+  color: #9D9D9D !important;
+}
+
+html.dark aside nav button:not(.bg-brand-600):hover {
+  background-color: #1C1C1C !important;
+  color: #CCCCCC !important;
+}
+
+html.dark aside .border-t button:not(.bg-brand-600) {
+  color: #9D9D9D !important;
+}
+
+html.dark aside .border-t button:not(.bg-brand-600):hover {
+  background-color: #1C1C1C !important;
+  color: #CCCCCC !important;
+}
+
+/* Sidebar status footer */
+html.dark aside .border-t.border-slate-800 {
+  border-color: #2D2D2D !important;
+  color: #9D9D9D !important;
+}
+
+html.dark aside .border-t.border-slate-800 span.font-mono {
+  color: #666666 !important;
+}
+
+/* ==========================================================================
+   TOP HEADER
+   ========================================================================== */
+html.dark header.bg-white,
+html.dark header {
+  background-color: #101010 !important;
+  border-color: #2D2D2D !important;
+  box-shadow: none !important;
+}
+
+html.dark header .text-slate-400 {
+  color: #666666 !important;
+}
+
+html.dark header .text-slate-300 {
+  color: #323232 !important;
+}
+
+html.dark header .text-slate-900 {
+  color: #CCCCCC !important;
+}
+
+html.dark header .bg-slate-100 {
+  background-color: #1C1C1C !important;
+  border-color: #323232 !important;
+  color: #9D9D9D !important;
+}
+
+/* ==========================================================================
+   HORIZONTAL WORKFLOW NAVIGATION
+   ========================================================================== */
+html.dark nav[aria-label="Activity Intelligence Pipeline"],
+html.dark nav[aria-label="Activity Intelligence Workflow Pipeline"] {
+  background-color: transparent !important;
+}
+
+/* Horizontal Workflow bar outer wrapper */
+html.dark .bg-white.border.border-slate-200.rounded-lg.shadow-xs.p-1\.5 {
+  background-color: #1C1C1C !important;
+  border-color: #323232 !important;
+}
+
+/* Chevron separators */
+html.dark svg.lucide-chevron-right.text-slate-300 {
+  color: #323232 !important;
+}
+
+/* Inactive items in workflow bar */
+html.dark nav[aria-label="Activity Intelligence Pipeline"] button:not(.bg-indigo-50\/80),
+html.dark nav[aria-label="Activity Intelligence Workflow Pipeline"] button:not(.bg-indigo-50\/80) {
+  color: #666666 !important;
+}
+
+html.dark nav[aria-label="Activity Intelligence Pipeline"] button:not(.bg-indigo-50\/80):hover,
+html.dark nav[aria-label="Activity Intelligence Workflow Pipeline"] button:not(.bg-indigo-50\/80):hover {
+  background-color: #252525 !important;
+  color: #CCCCCC !important;
+}
+
+/* Active workflow item */
+html.dark nav[aria-label="Activity Intelligence Pipeline"] button.bg-indigo-50\/80,
+html.dark nav[aria-label="Activity Intelligence Workflow Pipeline"] button.bg-indigo-50\/80 {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  color: #C7D2FE !important;
+}
+
+/* Data Ingestion dropdown menu */
+html.dark .divide-y.divide-slate-100 {
+  background-color: #1C1C1C !important;
+  border-color: #323232 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+html.dark .divide-y.divide-slate-100 > div:first-child {
+  background-color: #161616 !important;
+  border-color: #2D2D2D !important;
+}
+
+html.dark .divide-y.divide-slate-100 button {
+  color: #9D9D9D !important;
+}
+
+html.dark .divide-y.divide-slate-100 button:hover {
+  background-color: #252525 !important;
+  color: #CCCCCC !important;
+}
+
+html.dark .divide-y.divide-slate-100 button.bg-indigo-50\/80 {
+  background-color: rgba(99, 102, 241, 0.18) !important;
+  color: #C7D2FE !important;
+}
+
+/* ==========================================================================
+   CARDS & CONTAINERS
+   ========================================================================== */
+html.dark .bg-white {
+  background-color: #1C1C1C !important;
+  border-color: #323232 !important;
+  color: #CCCCCC;
+}
+
+html.dark .shadow-sm,
+html.dark .shadow-xs,
+html.dark .shadow-2xs {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Elevated Containers & Nested Cards */
+html.dark main .bg-slate-50,
+html.dark .bg-slate-100,
+html.dark .bg-slate-200,
+html.dark .bg-slate-50\/50,
+html.dark .bg-slate-50\/60,
+html.dark .bg-slate-50\/70,
+html.dark .bg-slate-50\/80,
+html.dark .bg-slate-900\/5,
+html.dark .bg-slate-900\/40 {
+  background-color: #252525 !important;
+  border-color: #323232 !important;
+}
+
+html.dark .bg-slate-800 {
+  background-color: #252525 !important;
+  border-color: #323232 !important;
+}
+
+html.dark .bg-slate-900 {
+  background-color: #101010 !important;
+  border-color: #2D2D2D !important;
+}
+
+/* ==========================================================================
+   BORDERS & DIVIDERS
+   ========================================================================== */
+html.dark .border-slate-200,
+html.dark .border-slate-300 {
+  border-color: #323232 !important;
+}
+
+html.dark .border-slate-100,
+html.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #2D2D2D !important;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+html.dark .text-slate-900 {
+  color: #CCCCCC !important;
+}
+
+html.dark .text-slate-800 {
+  color: #CCCCCC !important;
+}
+
+html.dark .text-slate-700 {
+  color: #9D9D9D !important;
+}
+
+html.dark .text-slate-600 {
+  color: #9D9D9D !important;
+}
+
+html.dark .text-slate-500 {
+  color: #666666 !important;
+}
+
+html.dark .text-slate-400 {
+  color: #666666 !important;
+}
+
+html.dark .text-slate-300 {
+  color: #666666 !important;
+}
+
+/* ==========================================================================
+   HOVER STATES
+   ========================================================================== */
+html.dark .hover\:bg-slate-50:hover,
+html.dark .hover\:bg-slate-100:hover,
+html.dark .hover\:bg-slate-50\/80:hover {
+  background-color: #252525 !important;
+}
+
+html.dark .hover\:text-slate-900:hover,
+html.dark .hover\:text-slate-950:hover,
+html.dark .hover\:text-slate-800:hover {
+  color: #CCCCCC !important;
+}
+
+html.dark .hover\:border-slate-300:hover {
+  border-color: #323232 !important;
+}
+
+/* ==========================================================================
+   FORM INPUTS, SELECTS, TEXTAREAS
+   ========================================================================== */
+html.dark input[type="text"],
+html.dark input[type="number"],
+html.dark input[type="date"],
+html.dark input[type="file"],
+html.dark input[type="search"],
+html.dark select,
+html.dark textarea {
+  background-color: #161616 !important;
+  color: #CCCCCC !important;
+  border-color: #323232 !important;
+}
+
+html.dark input[type="text"]:focus,
+html.dark input[type="number"]:focus,
+html.dark input[type="date"]:focus,
+html.dark input[type="file"]:focus,
+html.dark input[type="search"]:focus,
+html.dark select:focus,
+html.dark textarea:focus {
+  border-color: #6366F1 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 1px #6366F1 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #666666 !important;
+}
+
+html.dark select option {
+  background-color: #1C1C1C !important;
+  color: #CCCCCC !important;
+}
+
+/* Switches & Toggles */
+html.dark .bg-slate-300 {
+  background-color: #323232 !important;
+}
+
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+html.dark table {
+  background-color: #1C1C1C !important;
+}
+
+html.dark thead,
+html.dark thead tr,
+html.dark th,
+html.dark thead th {
+  background-color: #252525 !important;
+  color: #CCCCCC !important;
+  border-color: #2D2D2D !important;
+}
+
+html.dark thead {
+  border-bottom: 1px solid #323232 !important;
+}
+
+html.dark tbody tr {
+  background-color: #1C1C1C !important;
+  border-color: #2D2D2D !important;
+}
+
+html.dark tbody tr:hover {
+  background-color: #252525 !important;
+}
+
+html.dark td {
+  border-color: #2D2D2D !important;
+  color: #9D9D9D !important;
+}
+
+html.dark td .font-bold,
+html.dark td .font-semibold,
+html.dark td strong {
+  color: #CCCCCC !important;
+}
+
+/* ==========================================================================
+   BUTTONS (Secondary)
+   ========================================================================== */
+html.dark button.bg-white,
+html.dark button.bg-slate-100 {
+  background-color: #252525 !important;
+  border-color: #323232 !important;
+  color: #CCCCCC !important;
+}
+
+html.dark button.bg-white:hover,
+html.dark button.bg-slate-100:hover {
+  background-color: #2E2E2E !important;
+  border-color: #383838 !important;
+}
+
+/* ==========================================================================
+   STATUS BADGES
+   ========================================================================== */
+/* Success (Emerald) */
+html.dark .bg-emerald-50,
+html.dark .bg-emerald-100 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+  color: #34D399 !important;
+  border-color: rgba(16, 185, 129, 0.25) !important;
+}
+
+html.dark .text-emerald-700,
+html.dark .text-emerald-800,
+html.dark .text-emerald-900 {
+  color: #34D399 !important;
+}
+
+html.dark .text-emerald-600 {
+  color: #10B981 !important;
+}
+
+html.dark .border-emerald-100,
+html.dark .border-emerald-200 {
+  border-color: rgba(16, 185, 129, 0.25) !important;
+}
+
+/* Warning (Amber) */
+html.dark .bg-amber-50,
+html.dark .bg-amber-100,
+html.dark .bg-amber-50\/70 {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+  color: #FBBF24 !important;
+  border-color: rgba(245, 158, 11, 0.25) !important;
+}
+
+html.dark .text-amber-700,
+html.dark .text-amber-800,
+html.dark .text-amber-900 {
+  color: #FBBF24 !important;
+}
+
+html.dark .text-amber-600 {
+  color: #F59E0B !important;
+}
+
+html.dark .border-amber-100,
+html.dark .border-amber-200 {
+  border-color: rgba(245, 158, 11, 0.25) !important;
+}
+
+/* Error (Rose / Red) */
+html.dark .bg-rose-50,
+html.dark .bg-rose-100,
+html.dark .bg-red-50,
+html.dark .bg-red-100 {
+  background-color: rgba(244, 63, 94, 0.12) !important;
+  color: #FB7185 !important;
+  border-color: rgba(244, 63, 94, 0.25) !important;
+}
+
+html.dark .text-rose-700,
+html.dark .text-rose-800,
+html.dark .text-rose-900,
+html.dark .text-red-700,
+html.dark .text-red-800 {
+  color: #FB7185 !important;
+}
+
+html.dark .text-rose-600,
+html.dark .text-red-600 {
+  color: #F43F5E !important;
+}
+
+html.dark .border-rose-100,
+html.dark .border-rose-200 {
+  border-color: rgba(244, 63, 94, 0.25) !important;
+}
+
+/* Info / Brand (Blue) */
+html.dark .bg-blue-50,
+html.dark .bg-blue-100,
+html.dark .bg-brand-50,
+html.dark .bg-brand-100 {
+  background-color: rgba(59, 130, 246, 0.12) !important;
+  color: #60A5FA !important;
+  border-color: rgba(59, 130, 246, 0.25) !important;
+}
+
+html.dark .text-blue-700,
+html.dark .text-blue-800,
+html.dark .text-brand-700,
+html.dark .text-brand-800 {
+  color: #60A5FA !important;
+}
+
+html.dark .text-blue-600 {
+  color: #3B82F6 !important;
+}
+
+html.dark .border-blue-100,
+html.dark .border-blue-200 {
+  border-color: rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Active / Indigo */
+html.dark .bg-indigo-50,
+html.dark .bg-indigo-100,
+html.dark .bg-indigo-50\/50,
+html.dark .bg-indigo-50\/40 {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+  color: #818CF8 !important;
+  border-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+html.dark .text-indigo-950,
+html.dark .text-indigo-900,
+html.dark .text-indigo-800 {
+  color: #C7D2FE !important;
+}
+
+html.dark .text-indigo-600,
+html.dark .text-indigo-700 {
+  color: #818CF8 !important;
+}
+
+/* Architecture Roadmap Completed Badge */
+html.dark .bg-slate-200\/80 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+  color: #34D399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+
+html.dark .bg-slate-200\/80 svg {
+  color: #10B981 !important;
+}
+
+/* ==========================================================================
+   CODE & RAW PREVIEWS
+   ========================================================================== */
+html.dark pre,
+html.dark code:not(button code) {
+  background-color: #101010 !important;
+  border-color: #2D2D2D !important;
+  color: #CCCCCC !important;
+}
+
+/* ==========================================================================
+   SCROLLBARS
+   ========================================================================== */
+html.dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #101010;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #323232;
+  border-radius: 3px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+/* ==========================================================================
+   INFRASYNC AI ASSISTANT (Neutral Charcoal Enterprise Dark Theme)
+   ========================================================================== */
+html.dark .infrasync-ai-card {
+  background-color: #1C1C1C !important;
+  border-color: #323232 !important;
+}
+
+html.dark .infrasync-ai-user-bubble {
+  background-color: #252525 !important;
+  border: 1px solid #323232 !important;
+  color: #CCCCCC !important;
+}
+
+html.dark .infrasync-ai-bot-bubble {
+  background-color: #161616 !important;
+  border: 1px solid #2D2D2D !important;
+  color: #CCCCCC !important;
+}
+
+html.dark .infrasync-ai-loading-bubble {
+  background-color: #161616 !important;
+  border: 1px solid #2D2D2D !important;
+  color: #9D9D9D !important;
+}
+
+html.dark .infrasync-ai-suggestion-pill {
+  background-color: #252525 !important;
+  border-color: #323232 !important;
+  color: #9D9D9D !important;
+}
+
+html.dark .infrasync-ai-suggestion-pill:hover {
+  background-color: #2D2D2D !important;
+  color: #CCCCCC !important;
+  border-color: #444444 !important;
+}
+
+html.dark .infrasync-ai-input {
+  background-color: #161616 !important;
+  border-color: #323232 !important;
+  color: #CCCCCC !important;
+}
+
+html.dark .infrasync-ai-input:focus {
+  border-color: #555555 !important;
+}
+
+html.dark .infrasync-ai-submit-btn {
+  background-color: #252525 !important;
+  border: 1px solid #323232 !important;
+  color: #CCCCCC !important;
+}
+
+html.dark .infrasync-ai-submit-btn:hover:not(:disabled) {
+  background-color: #2D2D2D !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .infrasync-remove-file-btn {
+  background-color: #1C1C1C !important;
+  border-color: rgba(244, 63, 94, 0.35) !important;
+  color: #FDA4AF !important;
+}
+
+html.dark .infrasync-remove-file-btn:hover {
+  background-color: rgba(244, 63, 94, 0.12) !important;
+  border-color: rgba(244, 63, 94, 0.55) !important;
+  color: #FFE4E6 !important;
+}
+
+html.dark .infrasync-upload-more-btn {
+  background-color: #1C1C1C !important;
+  border-color: #323232 !important;
+  color: #CCCCCC !important;
+}
+
+html.dark .infrasync-upload-more-btn:hover {
+  background-color: #252525 !important;
+  color: #FFFFFF !important;
+}
+
+

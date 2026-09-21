@@ -1,0 +1,34 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+
+# Local runtime files
+backend/storage/
+backend/uploads/
+backend/temp/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+scratch/
+
+# Test artifacts
+backend/backend/storage/
+backend/test_site_progress.xlsx
