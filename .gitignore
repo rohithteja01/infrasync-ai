@@ -32,3 +32,6 @@ scratch/
 # Test artifacts
 backend/backend/storage/
 backend/test_site_progress.xlsx
+
+# Local Git worktrees
+frontend.worktrees/
